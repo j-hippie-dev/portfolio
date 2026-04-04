@@ -1,0 +1,324 @@
+/* =====
+  히어로
+===== */
+.pr-container {
+  height: 100vh;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ===== 심볼 ===== */
+.symbol {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  font-size: 12rem;
+  font-weight: 900;
+}
+
+.brace {
+  color: var(--color-pop-yellow);
+}
+
+.mark {
+  font-size: 15rem;
+  position: relative;
+  color: var(--color-lavender);
+}
+
+.mark > div {
+  animation: symbol 8s infinite;
+}
+
+div.q {
+  opacity: 0;
+  position: absolute;
+  top: 0.9px;
+  left: -11.5px;
+}
+
+div.e {
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  left: -3.7px;
+  animation-delay: 2s;
+}
+
+div.p {
+  opacity: 0;
+  animation-delay: 4s;
+}
+
+/* ===== 슬로건 ===== */
+.slogan {
+  font-size: 0.7rem;
+}
+
+/* 호버 효과 */
+.symbol:hover ~ .slogan .txt-hover,
+.slogan:hover .txt-hover {
+  color: transparent;
+  transition: 0.3s;
+}
+
+.symbol:hover ~ .slogan .txt-hover::after,
+.slogan:hover .txt-hover::after {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+.symbol:hover ~ .slogan .mark-hover::after,
+.slogan:hover .mark-hover::after {
+  top: -4px;
+}
+
+.txt-hover {
+  padding: 0 5px;
+  position: relative;
+}
+
+.txt-hover:nth-child(2) {
+  padding: 0 15px;
+}
+
+.txt-hover::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-weight: 900;
+  opacity: 0;
+  visibility: hidden;
+}
+.txt-hover:nth-child(2)::after {
+  content: 'ERROR';
+  color: var(--color-pink-red);
+}
+.txt-hover:nth-child(3)::after {
+  content: '?';
+  left: 22px;
+  font-size: 2rem;
+  color: var(--color-free-blue);
+}
+.txt-hover:nth-child(4)::after {
+  content: '!';
+  left: 24px;
+  font-size: 2rem;
+  color: var(--color-pop-yellow);
+}
+.txt-hover:nth-child(5)::after {
+  content: '.';
+  left: 29px;
+  font-size: 2rem;
+  color: var(--color-lavender);
+}
+.txt-hover:nth-child(6)::after {
+  content: 'HIPPIE';
+  left: 3px;
+  color: var(--color-lavender);
+}
+
+/* 타이핑 효과 */
+.typing {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 8px solid var(--color-white);
+  animation: typing 5s steps(69) forwards, blink 0.8s step-start infinite 5s;
+}
+
+/* ========
+  네비게이션
+========*/
+nav {
+  background-color: var(--main-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  padding: 40px 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  justify-items: center;
+}
+
+nav li a {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* =====
+  어바웃
+===== */
+#about {
+  /* height: 100vh; */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.title {
+  padding: 30px 0 10px;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.about-cont-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 90px;
+}
+
+/* i'm 나는 */
+.i-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.i-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 15vw;
+}
+
+.i-img {
+  padding-top: 120%;
+  background-image: url('../images/im.JPG');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.i-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-lavender);
+}
+
+.i-info > a {
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.i-sns {
+  padding-top: 40px;
+  font-size: 1.3rem;
+  display: flex;
+  gap: 10px;
+}
+.i-sns > a:hover {
+  transition: all 0.5s;
+}
+
+.i-sns > a:nth-of-type(1):hover {
+  color: var(--color-pop-yellow);;
+}
+.i-sns > a:nth-of-type(2):hover {
+  color: var(--color-lavender);;
+}
+.i-sns > a:nth-of-type(3):hover {
+  color: var(--color-pink-red);;
+}
+
+/* 자기소개 */
+.intro-card {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.card-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffffff18;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.period-size {
+  font-size: 0.8rem;
+  color: var(--color-lavender);
+}
+
+.intro-card i {
+  animation: txt-rotate 0.5s linear infinite alternate;
+}
+
+.card-desc {
+  padding-right: 30px;
+  text-align: center;
+}
+
+/* ========
+  애니메이션
+======== */
+/* 타이핑 애니메이션 */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 965px; }
+}
+
+/* 커서 깜빡임 애니메이션 */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* 심볼 애니메이션 */
+@keyframes symbol {
+  0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(-15deg) translateY(20px);
+    }
+  5% {
+      opacity: 1;
+      transform: scale(1.1) rotate(5deg) translateY(0);
+    }
+  8% {
+      transform: scale(1) rotate(0);
+    }
+  10% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  33.33% {
+      opacity: 0;
+      transform: scale(1.2) translateY(-30px);
+    }
+  100% {
+      opacity: 0;
+  }
+}
+
+@keyframes txt-rotate {
+  from {
+    transform: rotate(15deg) scale(1);
+  }
+  to {
+    transform: rotate(-10deg) scale(1.2);
+  }
+}

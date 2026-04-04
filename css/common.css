@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+ -ms-overflow-style: none;
+ }
+::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  color: var(--color-white);
+  background-color: var(--main-bg);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.txt-c-yellow {
+  color: var(--color-pop-yellow);
+}
+
+.txt-c-blue {
+  color: var(--color-free-blue);
+}
+
+.txt-c-lavender {
+  color: var(--color-lavender);
+}
