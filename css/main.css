@@ -31,7 +31,7 @@
 }
 
 .mark > div {
-  animation: symbol 8s infinite;
+  animation: symbol 6s infinite;
 }
 
 div.q {
@@ -187,17 +187,11 @@ nav ul li:nth-of-type(3):hover a,
   어바웃
 ===== */
 #about {
-  padding: 30px;
+  padding: 100px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
-}
-
-.title {
-  padding: 30px 0 10px;
-  font-size: 3rem;
-  font-weight: 900;
 }
 
 .about-cont-wrapper {
@@ -292,7 +286,7 @@ nav ul li:nth-of-type(3):hover a,
 #skill {
   white-space: nowrap;
   overflow: hidden;
-  cursor: pointer;
+  display: flex;
 }
 
 #skill:hover .skill-inner {
@@ -300,7 +294,7 @@ nav ul li:nth-of-type(3):hover a,
 }
 
 .skill-inner {
-  padding: 50px 0;
+  padding: 50px;
   display: flex;
   align-items: center;
   gap: 70px;
@@ -311,7 +305,6 @@ nav ul li:nth-of-type(3):hover a,
 
 .skill-inner .title {
   padding: 0;
-  padding-left: 50px;
   color: #ffffff50;
 }
 
@@ -326,6 +319,18 @@ nav ul li:nth-of-type(3):hover a,
 }
 .fa-vuejs {
   color: #42b883;
+}
+
+/* =======
+  프로젝트
+======= */
+#project {
+  height: 100vh;  /* TODO 프로젝트 콘텐츠 추가하고 삭제하기 */
+  justify-content: center; /* TODO 프로젝트 콘텐츠 추가하고 삭제하기 */
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ========
@@ -384,7 +389,8 @@ nav ul li:nth-of-type(3):hover a,
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-94.5%);
+    /* transform: translateX(-94.5%); */
+    transform: translateX(-100%);
   }
 }
 
@@ -472,35 +478,9 @@ nav ul li:nth-of-type(3):hover a,
     align-items: center;
     gap: 20px;
   }
-
-  .m-typing .t-q::after {
-    content: '?';
-    left: 25.5px;
-    font-size: 1.5rem;
-    color: var(--color-free-blue);
-  }
-  .m-typing .t-e::after {
-    content: '!';
-    left: 27px;
-    font-size: 1.5rem;
-    color: var(--color-pop-yellow);
-  }
-  .m-typing .t-p::after {
-    content: '.';
-    left: 31.5px;
-    font-size: 1.5rem;
-    color: var(--color-lavender);
-  }
-  .m-typing .t-hippie::after {
-    content: 'HIPPIE';
-    font-size: 1.4rem;
-    left: 8px;
-    color: var(--color-lavender);
-  }
+  .slogan-hippie::after { font-size: 1.4rem; }
   .symbol:hover ~ .slogan .mark-hover::after,
-  .slogan:hover .mark-hover::after {
-    top: -1.5px;
-  }
+  .slogan:hover .mark-hover::after { top: -1.5px; }
   .m-typing p {
     text-align: center;
     overflow: hidden;
@@ -512,7 +492,7 @@ nav ul li:nth-of-type(3):hover a,
   }
   .m-typing > :nth-child(2) {
     opacity: 0;
-    animation: m-typing 2.1s steps(30) forwards 2.2s, bd-none 0.3s step-end forwards 4.6s;
+    animation: m2-typing 2.1s steps(30) forwards 2.2s, bd-none 0.3s step-end forwards 4.6s;
   }
   .m-typing > :nth-child(3) {
     opacity: 0;
@@ -520,15 +500,19 @@ nav ul li:nth-of-type(3):hover a,
   }
   @keyframes m-typing {
     from { width: 0; padding-right: 0; opacity: 1; }
+    to { width: 350px; padding-right: 5px; opacity: 1; }
+  }
+  @keyframes m2-typing {
+    from { width: 0; padding-right: 0; opacity: 1; }
     to { width: 100%; padding-right: 5px; opacity: 1; }
+  }
+  @keyframes m3-typing {
+    from { width: 0; padding-right: 0; opacity: 1; }
+    to { width: 240px; padding-right: 5px; opacity: 1; }
   }
   @keyframes bd-none {
     from { border-right: 8px; }
     to { border-right: 0px; }
-  }
-  @keyframes m3-typing {
-    from { width: 0; padding-right: 0; opacity: 1; }
-    to { width: 250px; padding-right: 5px; opacity: 1; }
   }
   nav { display: none; }
   .title {
@@ -543,10 +527,22 @@ nav ul li:nth-of-type(3):hover a,
     font-size: 7rem;
   }
   .mark { font-size: 10rem; }
-  .slogan { font-size: 0.6rem; }
+  .slogan { font-size: 0.5em; }
+  .m-color-error { color: var(--color-pink-red); padding: 0; }
+  .m-color-q { color: var(--color-free-blue); }
+  .m-color-e { color: var(--color-pop-yellow); }
+  .m-color-p { color: var(--color-lavender); }
+  @keyframes m-typing {
+    from { width: 0; padding-right: 0; opacity: 1; }
+    to { width: 230px; padding-right: 5px; opacity: 1; }
+  }
+  @keyframes m2-typing {
+    from { width: 0; padding-right: 0; opacity: 1; }
+    to { width: 100%; padding-right: 5px; opacity: 1; }
+  }
   @keyframes m3-typing {
     from { width: 0; padding-right: 0; opacity: 1; }
-    to { width: 200px; padding-right: 5px; opacity: 1; }
+    to { width: 180px; padding-right: 5px; opacity: 1; }
   }
 }
 
