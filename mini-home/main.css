@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Single+Day&display=swap');
+
+body {
+  font-family: "Dongle", sans-serif;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
