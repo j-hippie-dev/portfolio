@@ -7,57 +7,84 @@
   <title>미니홈피</title>
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="./main.css">
+  <script src="https://kit.fontawesome.com/6a4a3ce349.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
   <div class="container">
     <main>
-      <section class="profile">
-        <div class="today-total">
-          <span>TODAY</span>
-          <span>TOTAL</span>
-        </div>
-        <div class="profile-inner">
-          <div class="profile-img"></div>
-          <div class="profile-line"></div>
-          <div class="profile-today"><span>TODAY IS ...</span>☁️ HAPPY ☁️</div>
-          <div class="profile-txt">
-            <P>안녀하새오.</P>
-            <P>곰도리애오.</P>
+
+        <section class="profile">
+          <div class="today-total">
+            <span>TODAY</span>
+            <span>TOTAL</span>
           </div>
-          <div class="profile-info">
-            <p><i class="fa-brands fa-apple"></i>010 000 0000</p>
-            <p><i class="fa-solid fa-paper-plane"></i>bear @ mail.com</p>
+          <div class="profile-inner">
+            <div class="profile-img"></div>
+            <div class="profile-line"></div>
+            <div class="profile-today"><span>TODAY IS ...</span>☁️ HAPPY ☁️</div>
+            <div class="profile-txt">
+              <P>안녀하새오.</P>
+              <P>곰도리애오.</P>
+            </div>
+            <div class="profile-info">
+              <p><i class="fa-brands fa-apple"></i>010 000 0000</p>
+              <p><i class="fa-solid fa-paper-plane"></i>bear @ mail.com</p>
+            </div>
+            <select name="profile-sns" id="profile-sns">
+              <option value="waves">파도타기</option>
+              <option value="instagram">인스타</option>
+              <option value="github">깃허브</option>
+              <option value="notion">노션</option>
+            </select>
           </div>
-          <select name="profile-sns" id="profile-sns">
-            <option value="waves">파도타기</option>
-            <option value="instagram">인스타</option>
-            <option value="github">깃허브</option>
-            <option value="notion">노션</option>
-          </select>
-        </div>
-      </section>
-      <section class="contents">
-        <h1 class="main-title">🧸 곰도리애 하루</h1>
-        <div class="contents-inner">
-          <div class="contents-tab">
-            <input type="radio" name="tab-menu" id="">
-            <label for=""></label>
-          </div>
-          <div class="content-top">
-            <div class="content-news">
-              <p class="news-title">Updated news</p>
+        </section>
+        <div class="white-space"></div>
+        <section class="contents">
+          <h1 class="main-title">🧸 곰도리애 하루</h1>
+          <div class="contents-inner">
+            <div class="contents-tab">
+              <input type="radio" name="tab-menu" id="">
+              <label for=""></label>
+            </div>
+            <div class="content-top">
+              <div class="content-news">
+                <p class="category">Updated news</p>
+                <ul>
+                  <li>안녕히 계세요 여러분~!</li>
+                  <li>전 이 세상의 모든</li>
+                  <li>굴레와 속박을 벗어던지고</li>
+                  <li>제 행복을 찾아 떠납니다</li>
+                </ul>
+              </div>
+              <div class="content-right">
+                <div class="content-cnt">
+                  <p>탭 메뉴1<span>0</span></p>
+                  <p>탭 메뉴2<span>0</span></p>
+                  <p>탭 메뉴3<span>0</span></p>
+                  <p>탭 메뉴4<span>0</span></p>
+                  <p>탭 메뉴5<span>0</span></p>
+                  <p>탭 메뉴6<span>0</span></p>
+                </div>
+                <div class="content-bgm">
+                  BGM
+                </div>
+              </div>
+            </div>
+            <div class="content-room">
+              <p class="category">Mini Room</p>
+              <div class="room-img"></div>
+            </div>
+            <div class="content-friends">
+              <p class="category">friends say</p>
               <ul>
-                <li></li>
+                <li>1</li>
+                <li>2</li>
               </ul>
             </div>
-            <div class="content-bgm"></div>
           </div>
-          <div class="content-room">mini-room</div>
-          <div class="content-friends">friends say</div>
-        </div>
-      </section>
+        </section>
+
     </main>
   </div>
-  <script src="https://kit.fontawesome.com/6a4a3ce349.js" crossorigin="anonymous"></script>
 </body>
 </html>

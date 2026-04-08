@@ -4,9 +4,31 @@ body {
   font-family: "Dongle", sans-serif;
 }
 
-.logo-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #98c9ff;
+}
+
+main {
+  display: flex;
+  padding: 30px;
+  border-radius: 30px;
+  background-image: url('./images/하늘2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.white-space {
+  width: 15px;
+  background-color: #fff;
+  padding: 10px 0;
+  background-clip: content-box;
 }
