@@ -1,34 +1,283 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Single+Day&display=swap');
 
+:root {
+  --color-white: #fff;
+  --color-sky-blue: #98c9ff;
+  --color-light-green: #a2d629;
+  --color-lavender: #8A8AFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+}
+
 body {
   font-family: "Dongle", sans-serif;
 }
 
 .container {
   height: 100vh;
+  padding-right: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #98c9ff;
+  background: url('./images/sky.jpg') no-repeat center;
+  background-size: cover;
 }
 
 main {
+  width: 90%;
+  padding: 30px 50px;
   display: flex;
-  padding: 30px;
   border-radius: 30px;
-  background-image: url('./images/하늘2.jpg');
+  background: var(--color-sky-blue);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.white-space {
+  width: 5px;
+  background-color: var(--color-white);
+  padding: 50px 0;
+  background-clip: content-box;
+}
+
+.today-total,
+.main-title {
+  position: absolute;
+  bottom: 100%;
+  color: var(--color-white);
+}
+
+.today-total {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.main-title {
+  padding-left: 15px;
+  letter-spacing: 5px;
+}
+
+/* ===== 
+  프로필
+===== */
+.profile {
+  flex: 1;
+}
+
+.profile-inner {
+  height: 100%;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-img {
+  padding-top: 115%;
+  background-image: url('./images/profile-img.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-section {
-  border-radius: 10px;
-  background-color: #fff;
+.profile-line {
+  border-top: 1px dashed var(--color-light-green);
 }
-.white-space {
-  width: 15px;
-  background-color: #fff;
-  padding: 10px 0;
-  background-clip: content-box;
+
+.profile-today {
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.profile-today > span {
+  padding-right: 10px;
+  color: var(--color-sky-blue);
+}
+
+.profile-txt {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.profile-info {
+  padding: 5px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.profile-info i {
+  padding-right: 25px;
+}
+
+.profile-info a:hover i {
+  color: var(--color-light-green);
+  transition: all 0.3s;
+}
+
+.profile-info a:hover .small {
+  color: var(--color-lavender);
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.profile select {
+  padding: 3px 5px;
+  font-size: 0.7rem;
+}
+
+/* =====
+  콘텐츠
+===== */
+.contents {
+  flex: 3;
+  position: relative;
+}
+
+.contents-tab input {
+  display: none;
+}
+
+.contents-tab label {
+  width: 6vw;
+  padding: 10px 3px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: var(--color-light-green);
+}
+
+label[for="tab-home"] {
+  top: 5%;
+}
+label[for="tab-profile"] {
+  top: 15%;
+}
+label[for="tab-diary"] {
+  top: 25%;
+}
+label[for="tab-photos"] {
+  top: 35%;
+}
+label[for="tab-guestbook"] {
+  top: 45%;
+}
+
+.contents-tab input:checked + label {
+  width: 7vw;
+  color: var(--color-light-green);
+  border: 1px solid var(--color-light-green);
+  border-left: none;
+  background-color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.contents-tab input:hover + label {
+  width: 7vw;
+  background-color: var(--color-lavender);
+  transition: all 0.3s;
+}
+
+.contents-tab input:checked:hover + label {
+  background-color: var(--color-white);
+}
+
+.contents-inner {
+  height: 70vh;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.category {
+  margin-bottom: 10px;
+  color: var(--color-sky-blue);
+  border-bottom: 1px dashed var(--color-light-green);
+}
+
+.contents-top {
+  display: flex;
+  gap: 30px;
+}
+
+.content-news {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.content-news li::before {
+  content: '🩵';
+  padding-right: 8px;
+  font-size: 0.5rem;
+}
+
+.contents-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content-cnt {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.content-cnt span {
+  padding-left: 10px;
+  color: var(--color-sky-blue);
+}
+
+.content-img {
+  padding-top: 40%;
+  background: url('./images/bear-gif.gif') no-repeat left;
+  background-size: contain;
+  position: relative;
+}
+
+.content-img > span {
+  position: absolute;
+  top: 45%;
+  right: 25%;
+}
+
+.content-room {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-img {
+  padding-top: 80%;
+  background: url('./images/room-bear.jpg') no-repeat left;
+  background-size: cover;
 }
