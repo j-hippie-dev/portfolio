@@ -27,8 +27,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('./images/sky.jpg') no-repeat center;
-  background-size: cover;
+  background: var(--color-sky-blue);
+  
 }
 
 main {
@@ -36,7 +36,8 @@ main {
   padding: 30px 50px;
   display: flex;
   border-radius: 30px;
-  background: var(--color-sky-blue);
+  background: url('./images/sky.jpg') no-repeat center;
+  background-size: cover;
 }
 
 section {

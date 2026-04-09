@@ -12,6 +12,7 @@
 <body>
   <div class="container">
     <main>
+      <!-- 프로필 섹션 -->
       <section class="profile">
         <div class="today-total">
           <span>TODAY</span>
@@ -36,56 +37,87 @@
             <option value="notion">노션</option>
           </select>
         </div>
+
+      <!-- 콘텐츠 섹션 -->
       </section>
       <!-- <div class="white-space"></div> -->
       <section class="contents">
         <h1 class="main-title">🧸 곰도리애 하루</h1>
+
+        <!-- 탭 메뉴 -->
         <div class="contents-tab">
           <input type="radio" name="tab-menu" id="tab-home" checked>
           <label for="tab-home">홈</label>
+
           <input type="radio" name="tab-menu" id="tab-profile">
           <label for="tab-profile">프로필</label>
+
           <input type="radio" name="tab-menu" id="tab-diary">
           <label for="tab-diary">다이어리</label>
+
           <input type="radio" name="tab-menu" id="tab-photos">
           <label for="tab-photos">사진첩</label>
+
           <input type="radio" name="tab-menu" id="tab-guestbook">
           <label for="tab-guestbook">방명록</label>
         </div>
+
+        <!-- 탭 콘텐츠 -->
         <div class="contents-inner">
-          <div class="contents-top">
-            <div class="content-news">
-              <p class="category">Updated news</p>
+          <!-- 홈 -->
+          <div class="home-container">
+            <div class="contents-top">
+              <div class="content-news">
+                <p class="category">Updated news</p>
+                <ul>
+                  <li>안녕히 계세요 여러분~!</li>
+                  <li>전 이 세상의 모든</li>
+                  <li>굴레와 속박을 벗어던지고</li>
+                  <li>제 행복을 찾아 떠납니다</li>
+                </ul>
+              </div>
+              <div class="contents-right">
+                <div class="content-cnt">
+                  <p>게시글<span>0</span></p>
+                  <p>다이어리<span>0</span></p>
+                  <p>사진첩<span>0</span></p>
+                  <p>방명록<span>0</span></p>
+                </div>
+                <div class="content-img"><span>🩵 💙 🩵 💙</span></div>
+                <!-- <div class="content-bgm">
+                  <p class="category">BGM</p>
+                </div> -->
+              </div>
+            </div>
+            <div class="content-room">
+              <p class="category">Mini Room</p>
+              <div class="room-img"></div>
+            </div>
+            <div class="content-friends">
+              <p class="category">friends say</p>
               <ul>
-                <li>안녕히 계세요 여러분~!</li>
-                <li>전 이 세상의 모든</li>
-                <li>굴레와 속박을 벗어던지고</li>
-                <li>제 행복을 찾아 떠납니다</li>
+                <li>1</li>
+                <li>2</li>
               </ul>
             </div>
-            <div class="contents-right">
-              <div class="content-cnt">
-                <p>게시글<span>0</span></p>
-                <p>다이어리<span>0</span></p>
-                <p>사진첩<span>0</span></p>
-                <p>방명록<span>0</span></p>
-              </div>
-              <div class="content-img"><span>🩵 💙 🩵 💙</span></div>
-              <!-- <div class="content-bgm">
-                <p class="category">BGM</p>
-              </div> -->
-            </div>
           </div>
-          <div class="content-room">
-            <p class="category">Mini Room</p>
-            <div class="room-img"></div>
+
+          <!-- 프로필 -->
+          <div class="profile-container">
+            
           </div>
-          <div class="content-friends">
-            <p class="category">friends say</p>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-            </ul>
+
+          <!-- 다이어리 -->
+          <div class="diary-container">
+            준비중입니다 🧸
+          </div>
+
+          <!-- 사진첩 -->
+          <div class="photos-container"></div>
+
+          <!-- 방명록 -->
+          <div class="guestbook-container">
+            준비중입니다 🧸
           </div>
         </div>
       </section>

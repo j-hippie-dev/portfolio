@@ -143,25 +143,29 @@ div.p {
 }
 .slogan-q::after {
   content: '?';
-  left: 42%;
+  /* left: 42%; */
+  left: 28px;
   font-size: 2rem;
   color: var(--color-free-blue);
 }
 .slogan-e::after {
   content: '!';
-  left: 45.5%;
+  /* left: 45.5%; */
+  left: 34px;
   font-size: 2rem;
   color: var(--color-pop-yellow);
 }
 .slogan-p::after {
   content: '.';
-  left: 46.5%;
+  /* left: 46.5%; */
+  left: 40px;
   font-size: 2rem;
   color: var(--color-lavender);
 }
 .slogan-hippie::after {
   content: 'HIPPIE';
-  left: 6%;
+  /* left: 6%; */
+  left: 5px;
   color: var(--color-lavender);
 }
 
@@ -681,5 +685,5 @@ footer {
 /* 슬로건 글자 크기 */
 @media screen and (min-width: 1200px) {
   .slogan { font-size: 0.8rem; }
-  .slogan-error::after { left: -3%; }
+  .slogan-error::after { left: -7%; }
 }
